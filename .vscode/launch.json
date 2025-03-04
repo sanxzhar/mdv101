@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/sanzhar/coding/mdv/week4",
+      "program": "/Users/sanzhar/coding/mdv/week4/build/Debug/outDebug"
+    }
+  ]
+}
