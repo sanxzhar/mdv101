@@ -46,103 +46,97 @@ VL_INLINE_OPT void Valu___024root___ico_sequent__TOP__0(Valu___024root* vlSelf) 
                             | (IData)(vlSelfRef.in_b))
                          : ((2U == (IData)(vlSelfRef.select))
                              ? ((IData)(vlSelfRef.in_a) 
-                                | (0xffffU & (~ (IData)(vlSelfRef.in_b))))
+                                | (~ (IData)(vlSelfRef.in_b)))
                              : ((3U == (IData)(vlSelfRef.select))
-                                 ? 1U : ((4U == (IData)(vlSelfRef.select))
-                                          ? ((IData)(vlSelfRef.in_a) 
-                                             | (0xffffU 
-                                                & ((IData)(vlSelfRef.in_a) 
-                                                   & (~ (IData)(vlSelfRef.in_b)))))
-                                          : ((5U == (IData)(vlSelfRef.select))
-                                              ? ((((IData)(vlSelfRef.in_a) 
-                                                   | (IData)(vlSelfRef.in_b)) 
-                                                  + 
-                                                  (0xffffU 
-                                                   & ((IData)(vlSelfRef.in_a) 
-                                                      & (~ (IData)(vlSelfRef.in_b))))) 
-                                                 + (IData)(vlSelfRef.carry_in))
-                                              : ((6U 
-                                                  == (IData)(vlSelfRef.select))
-                                                  ? 
-                                                 ((IData)(1U) 
-                                                  + 
-                                                  ((IData)(vlSelfRef.in_a) 
-                                                   + 
-                                                   (0xffffU 
-                                                    & ((IData)(1U) 
-                                                       + 
-                                                       (~ (IData)(vlSelfRef.in_b))))))
-                                                  : 
-                                                 ((7U 
+                                 ? 0xffffU : ((4U == (IData)(vlSelfRef.select))
+                                               ? ((IData)(vlSelfRef.in_a) 
+                                                  | ((IData)(vlSelfRef.in_a) 
+                                                     & (~ (IData)(vlSelfRef.in_b))))
+                                               : ((5U 
                                                    == (IData)(vlSelfRef.select))
                                                    ? 
-                                                  ((IData)(1U) 
-                                                   + 
-                                                   (0xffffU 
-                                                    & ((IData)(vlSelfRef.in_a) 
-                                                       & (~ (IData)(vlSelfRef.in_b)))))
+                                                  ((((IData)(vlSelfRef.in_a) 
+                                                     | (IData)(vlSelfRef.in_b)) 
+                                                    + 
+                                                    ((IData)(vlSelfRef.in_a) 
+                                                     & (~ (IData)(vlSelfRef.in_b)))) 
+                                                   + (IData)(vlSelfRef.carry_in))
                                                    : 
-                                                  ((8U 
+                                                  ((6U 
                                                     == (IData)(vlSelfRef.select))
                                                     ? 
-                                                   (((IData)(vlSelfRef.in_a) 
-                                                     + 
-                                                     ((IData)(vlSelfRef.in_a) 
-                                                      & (IData)(vlSelfRef.in_b))) 
-                                                    + (IData)(vlSelfRef.carry_in))
+                                                   ((IData)(0x1ffffU) 
+                                                    + 
+                                                    ((IData)(vlSelfRef.in_a) 
+                                                     - (IData)(vlSelfRef.in_b)))
                                                     : 
-                                                   ((9U 
+                                                   ((7U 
                                                      == (IData)(vlSelfRef.select))
                                                      ? 
-                                                    (((IData)(vlSelfRef.in_a) 
-                                                      + (IData)(vlSelfRef.in_b)) 
-                                                     + (IData)(vlSelfRef.carry_in))
+                                                    ((IData)(0x1ffffU) 
+                                                     + 
+                                                     ((IData)(vlSelfRef.in_a) 
+                                                      & (~ (IData)(vlSelfRef.in_b))))
                                                      : 
-                                                    ((0xaU 
+                                                    ((8U 
                                                       == (IData)(vlSelfRef.select))
                                                       ? 
-                                                     ((((IData)(vlSelfRef.in_a) 
-                                                        | (0xffffU 
-                                                           & (~ (IData)(vlSelfRef.in_b)))) 
+                                                     (((IData)(vlSelfRef.in_a) 
                                                        + 
                                                        ((IData)(vlSelfRef.in_a) 
                                                         & (IData)(vlSelfRef.in_b))) 
                                                       + (IData)(vlSelfRef.carry_in))
                                                       : 
-                                                     ((0xbU 
+                                                     ((9U 
                                                        == (IData)(vlSelfRef.select))
                                                        ? 
-                                                      ((IData)(1U) 
-                                                       + 
-                                                       ((IData)(vlSelfRef.in_a) 
-                                                        & (IData)(vlSelfRef.in_b)))
+                                                      (((IData)(vlSelfRef.in_a) 
+                                                        + (IData)(vlSelfRef.in_b)) 
+                                                       + (IData)(vlSelfRef.carry_in))
                                                        : 
-                                                      ((0xcU 
+                                                      ((0xaU 
                                                         == (IData)(vlSelfRef.select))
                                                         ? 
-                                                       (((IData)(vlSelfRef.in_a) 
-                                                         + (IData)(vlSelfRef.in_a)) 
+                                                       ((((IData)(vlSelfRef.in_a) 
+                                                          | (~ (IData)(vlSelfRef.in_b))) 
+                                                         + 
+                                                         ((IData)(vlSelfRef.in_a) 
+                                                          & (IData)(vlSelfRef.in_b))) 
                                                         + (IData)(vlSelfRef.carry_in))
                                                         : 
-                                                       ((0xdU 
+                                                       ((0xbU 
                                                          == (IData)(vlSelfRef.select))
                                                          ? 
-                                                        ((((IData)(vlSelfRef.in_a) 
-                                                           | (IData)(vlSelfRef.in_b)) 
-                                                          + (IData)(vlSelfRef.in_a)) 
-                                                         + (IData)(vlSelfRef.carry_in))
+                                                        ((IData)(0x1ffffU) 
+                                                         + 
+                                                         ((IData)(vlSelfRef.in_a) 
+                                                          & (IData)(vlSelfRef.in_b)))
                                                          : 
-                                                        ((0xeU 
+                                                        ((0xcU 
                                                           == (IData)(vlSelfRef.select))
                                                           ? 
-                                                         ((((IData)(vlSelfRef.in_a) 
-                                                            | (0xffffU 
-                                                               & (~ (IData)(vlSelfRef.in_b)))) 
+                                                         (((IData)(vlSelfRef.in_a) 
                                                            + (IData)(vlSelfRef.in_a)) 
                                                           + (IData)(vlSelfRef.carry_in))
                                                           : 
-                                                         ((IData)(1U) 
-                                                          + (IData)(vlSelfRef.in_a))))))))))))))))));
+                                                         ((0xdU 
+                                                           == (IData)(vlSelfRef.select))
+                                                           ? 
+                                                          ((((IData)(vlSelfRef.in_a) 
+                                                             | (IData)(vlSelfRef.in_b)) 
+                                                            + (IData)(vlSelfRef.in_a)) 
+                                                           + (IData)(vlSelfRef.carry_in))
+                                                           : 
+                                                          ((0xeU 
+                                                            == (IData)(vlSelfRef.select))
+                                                            ? 
+                                                           ((((IData)(vlSelfRef.in_a) 
+                                                              | (~ (IData)(vlSelfRef.in_b))) 
+                                                             + (IData)(vlSelfRef.in_a)) 
+                                                            + (IData)(vlSelfRef.carry_in))
+                                                            : 
+                                                           ((IData)(0x1ffffU) 
+                                                            + (IData)(vlSelfRef.in_a))))))))))))))))));
     vlSelfRef.carry_out = ((1U & (~ (IData)(vlSelfRef.mode))) 
                            && (1U & (alu__DOT__arithmetic_alu__DOT__result_with_carry_out 
                                      >> 0x10U)));

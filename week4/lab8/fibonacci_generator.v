@@ -16,7 +16,7 @@ module fibonacci_generator(
         end else if (enable) begin
             fib_out <= fib_prev1 + fib_prev2;
             fib_prev2 <= fib_prev1;
-            fib_prev1 <= fib_out;
+            fib_prev1 <= fib_prev1 + fib_prev2;
         end
     end
 

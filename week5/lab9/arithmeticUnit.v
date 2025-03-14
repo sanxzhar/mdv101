@@ -27,33 +27,33 @@ module arithmeticUnit(
         else if(sel == 4'b0001)
             result_with_carry_out = {1'b0, in_a} | {1'b0, in_b};
         else if(sel == 4'b0010)
-            result_with_carry_out = {1'b0, in_a} | {1'b0, ~in_b};
+            result_with_carry_out = {1'b0, in_a} | ~{1'b0, in_b};
         else if(sel == 4'b0011)
-            result_with_carry_out = {1'b0, 16'b1};
+            result_with_carry_out = {1'b0, 16'b1111111111111111};
         else if(sel == 4'b0100)
-            result_with_carry_out = {1'b0, in_a} | ({1'b0, in_a} & {1'b0, ~in_b});
+            result_with_carry_out = {1'b0, in_a} | ({1'b0, in_a} & ~{1'b0, in_b});
         else if(sel == 4'b0101)
-            result_with_carry_out = ({1'b0, in_a} | {1'b0, in_b}) + ({1'b0, in_a} & {1'b0, ~in_b}) + {16'b0, carry_in};
+            result_with_carry_out = ({1'b0, in_a} | {1'b0, in_b}) + ({1'b0, in_a} & ~{1'b0, in_b}) + {16'b0, carry_in};
         else if(sel == 4'b0110)
-            result_with_carry_out = {1'b0, in_a} + {1'b0, (~in_b) + 16'd1} + {1'b0, 16'b1};
+            result_with_carry_out = {1'b0, in_a} - {1'b0, in_b} + {1'b1, 16'b1111_1111_1111_1111};
         else if(sel == 4'b0111)
-            result_with_carry_out = ({1'b0, in_a} & {1'b0, ~in_b}) + {1'b0, 16'b1};
+            result_with_carry_out = ({1'b0, in_a} & ~{1'b0, in_b}) + {1'b1, 16'b1111_1111_1111_1111};
         else if(sel == 4'b1000)
             result_with_carry_out = {1'b0, in_a} + ({1'b0, in_a} & {1'b0, in_b}) + {16'b0, carry_in};
         else if(sel == 4'b1001)
             result_with_carry_out = {1'b0, in_a} + {1'b0, in_b} + {16'b0, carry_in};
         else if(sel == 4'b1010)
-            result_with_carry_out = ({1'b0, in_a} | {1'b0, ~in_b}) + ({1'b0, in_a} & {1'b0, in_b}) + {16'b0, carry_in};
+            result_with_carry_out = ({1'b0, in_a} | ~{1'b0, in_b}) + ({1'b0, in_a} & {1'b0, in_b}) + {16'b0, carry_in};
         else if(sel == 4'b1011)
-            result_with_carry_out = ({1'b0, in_a} & {1'b0, in_b}) + {1'b0, 16'b1};
+            result_with_carry_out = ({1'b0, in_a} & {1'b0, in_b}) + {1'b1, 16'b1111_1111_1111_1111};
         else if(sel == 4'b1100)
             result_with_carry_out = {1'b0, in_a} + {1'b0, in_a} + {16'b0, carry_in};
         else if(sel == 4'b1101)
             result_with_carry_out = ({1'b0, in_a} | {1'b0, in_b}) + {1'b0, in_a} + {16'b0, carry_in};
         else if(sel == 4'b1110)
-            result_with_carry_out = ({1'b0, in_a} | {1'b0, ~in_b}) + {1'b0, in_a} + {16'b0, carry_in};
+            result_with_carry_out = ({1'b0, in_a} | ~{1'b0, in_b}) + {1'b0, in_a} + {16'b0, carry_in};
         else
-            result_with_carry_out = {1'b0, in_a} + {1'b0, 16'b1};
+            result_with_carry_out = {1'b0, in_a} + {1'b1, 16'b1111_1111_1111_1111};
 
     end
         

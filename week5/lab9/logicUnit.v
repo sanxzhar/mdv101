@@ -31,7 +31,7 @@ module logicUnit(
         else if(sel == 4'b1011)
             logic_out = in_a & in_b;
         else if(sel == 4'b1100)
-            logic_out = 16'b1;
+            logic_out = 16'b0000000000000001;
         else if(sel == 4'b1101)
             logic_out = in_a | ~(in_b);
         else if(sel == 4'b1110)

@@ -28,27 +28,28 @@ VL_INLINE_OPT void Vfibonacci_generator___024root___nba_sequent__TOP__0(Vfibonac
     Vfibonacci_generator__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Init
+    IData/*31:0*/ __Vdly__fibonacci_generator__DOT__fib_prev1;
+    __Vdly__fibonacci_generator__DOT__fib_prev1 = 0;
     IData/*31:0*/ __Vdly__fibonacci_generator__DOT__fib_prev2;
     __Vdly__fibonacci_generator__DOT__fib_prev2 = 0;
-    IData/*31:0*/ __Vdly__fib_out;
-    __Vdly__fib_out = 0;
     // Body
+    __Vdly__fibonacci_generator__DOT__fib_prev1 = vlSelfRef.fibonacci_generator__DOT__fib_prev1;
     __Vdly__fibonacci_generator__DOT__fib_prev2 = vlSelfRef.fibonacci_generator__DOT__fib_prev2;
-    __Vdly__fib_out = vlSelfRef.fib_out;
     if (vlSelfRef.rst) {
+        __Vdly__fibonacci_generator__DOT__fib_prev1 = 1U;
         __Vdly__fibonacci_generator__DOT__fib_prev2 = 0U;
-        __Vdly__fib_out = 0U;
-        vlSelfRef.fibonacci_generator__DOT__fib_prev1 = 1U;
+        vlSelfRef.fib_out = 0U;
     } else if (vlSelfRef.enable) {
-        __Vdly__fib_out = (vlSelfRef.fibonacci_generator__DOT__fib_prev1 
-                           + vlSelfRef.fibonacci_generator__DOT__fib_prev2);
+        vlSelfRef.fib_out = (vlSelfRef.fibonacci_generator__DOT__fib_prev1 
+                             + vlSelfRef.fibonacci_generator__DOT__fib_prev2);
         __Vdly__fibonacci_generator__DOT__fib_prev2 
             = vlSelfRef.fibonacci_generator__DOT__fib_prev1;
-        vlSelfRef.fibonacci_generator__DOT__fib_prev1 
-            = vlSelfRef.fib_out;
+        __Vdly__fibonacci_generator__DOT__fib_prev1 
+            = (vlSelfRef.fibonacci_generator__DOT__fib_prev1 
+               + vlSelfRef.fibonacci_generator__DOT__fib_prev2);
     }
+    vlSelfRef.fibonacci_generator__DOT__fib_prev1 = __Vdly__fibonacci_generator__DOT__fib_prev1;
     vlSelfRef.fibonacci_generator__DOT__fib_prev2 = __Vdly__fibonacci_generator__DOT__fib_prev2;
-    vlSelfRef.fib_out = __Vdly__fib_out;
 }
 
 void Vfibonacci_generator___024root___eval_triggers__act(Vfibonacci_generator___024root* vlSelf);
